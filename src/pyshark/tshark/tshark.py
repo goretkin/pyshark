@@ -12,6 +12,12 @@ class TSharkNotFoundException(Exception):
     pass
 
 
+tshark_path_forced = None
+
+def force_tshark_path(path):
+    global tshark_path_forced
+    tshark_path_forced = path
+
 def get_tshark_path():
     """
     Finds the path of the tshark executable. If the user has specified a
@@ -20,6 +26,11 @@ def get_tshark_path():
 
     :raises TSharkNotFoundException in case TShark is not found in any location.
     """
+
+    global tshark_path_forced
+    if tshark_path_forced:
+        return tshark_path_forced
+
     config = get_config()
 
     if sys.platform.startswith('win'):

@@ -1,0 +1,129 @@
+#!/usr/bin/python
+
+header = \
+"""<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="pdml2html.xsl"?>
+<!-- You can find pdml2html.xsl in /usr/local/share/wireshark or at http://anonsvn.wireshark.org/trunk/wireshark/pdml2html.xsl. -->
+<pdml version="0" creator="wireshark/1.12.3" time="Thu Feb 12 02:05:19 2015" capture_file="">"""
+
+packet = \
+"""<packet>
+  <proto name="geninfo" pos="0" showname="General information" size="82">
+    <field name="num" pos="0" show="2" showname="Number" value="2" size="82"/>
+    <field name="len" pos="0" show="82" showname="Frame Length" value="52" size="82"/>
+    <field name="caplen" pos="0" show="82" showname="Captured Length" value="52" size="82"/>
+    <field name="timestamp" pos="0" show="Feb 12, 2015 02:05:19.051240000 EST" showname="Captured Time" value="1423724719.051240000" size="82"/>
+  </proto>
+  <proto name="frame" showname="Frame 2: 82 bytes on wire (656 bits), 82 bytes captured (656 bits) on interface 0" size="82" pos="0">
+    <field name="frame.interface_id" showname="Interface id: 0 (usbmon1)" size="0" pos="0" show="0"/>
+    <field name="frame.encap_type" showname="Encapsulation type: USB packets with Linux header and padding (115)" size="0" pos="0" show="115"/>
+    <field name="frame.time" showname="Arrival Time: Feb 12, 2015 02:05:19.051240000 EST" size="0" pos="0" show="Feb 12, 2015 02:05:19.051240000 EST"/>
+    <field name="frame.offset_shift" showname="Time shift for this packet: 0.000000000 seconds" size="0" pos="0" show="0.000000000"/>
+    <field name="frame.time_epoch" showname="Epoch Time: 1423724719.051240000 seconds" size="0" pos="0" show="1423724719.051240000"/>
+    <field name="frame.time_delta" showname="Time delta from previous captured frame: 0.000275000 seconds" size="0" pos="0" show="0.000275000"/>
+    <field name="frame.time_delta_displayed" showname="Time delta from previous displayed frame: 0.000000000 seconds" size="0" pos="0" show="0.000000000"/>
+    <field name="frame.time_relative" showname="Time since reference or first frame: 0.000275000 seconds" size="0" pos="0" show="0.000275000"/>
+    <field name="frame.number" showname="Frame Number: 2" size="0" pos="0" show="2"/>
+    <field name="frame.len" showname="Frame Length: 82 bytes (656 bits)" size="0" pos="0" show="82"/>
+    <field name="frame.cap_len" showname="Capture Length: 82 bytes (656 bits)" size="0" pos="0" show="82"/>
+    <field name="frame.marked" showname="Frame is marked: False" size="0" pos="0" show="0"/>
+    <field name="frame.ignored" showname="Frame is ignored: False" size="0" pos="0" show="0"/>
+    <field name="frame.protocols" showname="Protocols in frame: usb" size="0" pos="0" show="usb"/>
+  </proto>
+  <proto name="usb" showname="USB URB" size="64" pos="0">
+    <field name="usb.urb_id" showname="URB id: 0xffff8804278af180" size="8" pos="0" show="18446612150157504896" value="80f18a270488ffff"/>
+    <field name="usb.urb_type" showname="URB type: URB_COMPLETE (&apos;C&apos;)" size="1" pos="8" show="67" value="43"/>
+    <field name="usb.transfer_type" showname="URB transfer type: URB_CONTROL (0x02)" size="1" pos="9" show="2" value="02"/>
+    <field name="usb.endpoint_number" showname="Endpoint: 0x80, Direction: IN" size="1" pos="10" show="128" value="80">
+      <field name="usb.endpoint_number.direction" showname="1... .... = Direction: IN (1)" size="1" pos="10" show="1" value="1" unmaskedvalue="80"/>
+      <field name="usb.endpoint_number.endpoint" showname=".000 0000 = Endpoint value: 0" size="1" pos="10" show="0" value="0" unmaskedvalue="80"/>
+    </field>
+    <field name="usb.device_address" showname="Device: 8" size="1" pos="11" show="8" value="08"/>
+    <field name="usb.bus_id" showname="URB bus id: 1" size="2" pos="12" show="1" value="0100"/>
+    <field name="usb.setup_flag" showname="Device setup request: not relevant (&apos;-&apos;)" size="1" pos="14" show="-" value="2d"/>
+    <field name="usb.data_flag" showname="Data: present (0)" size="1" pos="15" show="present (0)" value="00"/>
+    <field name="usb.urb_ts_sec" showname="URB sec: 1423724719" size="8" pos="16" show="1423724719" value="af50dc5400000000"/>
+    <field name="usb.urb_ts_usec" showname="URB usec: 51240" size="4" pos="24" show="51240" value="28c80000"/>
+    <field name="usb.urb_status" showname="URB status: Success (0)" size="4" pos="28" show="0" value="00000000"/>
+    <field name="usb.urb_len" showname="URB length [bytes]: 18" size="4" pos="32" show="18" value="12000000"/>
+    <field name="usb.data_len" showname="Data length [bytes]: 18" size="4" pos="36" show="18" value="12000000"/>
+    <field name="usb.request_in" showname="Request in: 1" size="0" pos="0" show="1"/>
+    <field name="usb.time" showname="Time from request: 0.000275000 seconds" size="0" pos="0" show="0.000275000"/>
+    <field name="usb.unused_setup_header" showname="Unused Setup Header" size="8" pos="40" show="" value=""/>
+    <field name="usb.interval" showname="Interval: 0" size="4" pos="48" show="0" value="00000000"/>
+    <field name="usb.start_frame" showname="Start frame: 0" size="4" pos="52" show="0" value="00000000"/>
+    <field name="usb.copy_of_transfer_flags" showname="Copy of Transfer Flags: 0x00000200" size="4" pos="56" show="512" value="00020000"/>
+    <field name="usb.iso.numdesc" showname="Number of ISO descriptors: 0" size="4" pos="60" show="0" value="00000000"/>
+  </proto>
+  <proto name="fake-field-wrapper">
+    <field name="" show="DEVICE DESCRIPTOR" size="18" pos="64" value="120100020000004023397b71040101020301">
+      <field name="usb.bLength" showname="bLength: 18" size="1" pos="64" show="18" value="12"/>
+      <field name="usb.bDescriptorType" showname="bDescriptorType: 0x01 (DEVICE)" size="1" pos="65" show="1" value="01"/>
+      <field name="usb.bcdUSB" showname="bcdUSB: 0x0200" size="2" pos="66" show="512" value="0002"/>
+      <field name="usb.bDeviceClass" showname="bDeviceClass: Device (0x00)" size="1" pos="68" show="0" value="00"/>
+      <field name="usb.bDeviceSubClass" showname="bDeviceSubClass: 0" size="1" pos="69" show="0" value="00"/>
+      <field name="usb.bDeviceProtocol" showname="bDeviceProtocol: 0 (Use class code info from Interface Descriptors)" size="1" pos="70" show="0" value="00"/>
+      <field name="usb.bMaxPacketSize0" showname="bMaxPacketSize0: 64" size="1" pos="71" show="64" value="40"/>
+      <field name="usb.idVendor" showname="idVendor: National Instruments Corp. (0x3923)" size="2" pos="72" show="14627" value="2339"/>
+      <field name="usb.idProduct" showname="idProduct: Unknown (0x717b)" size="2" pos="74" show="29051" value="7b71"/>
+      <field name="usb.bcdDevice" showname="bcdDevice: 0x0104" size="2" pos="76" show="260" value="0401"/>
+      <field name="usb.iManufacturer" showname="iManufacturer: 1" size="1" pos="78" show="1" value="01"/>
+      <field name="usb.iProduct" showname="iProduct: 2" size="1" pos="79" show="2" value="02"/>
+      <field name="usb.iSerialNumber" showname="iSerialNumber: 3" size="1" pos="80" show="3" value="03"/>
+      <field name="usb.bNumConfigurations" showname="bNumConfigurations: 1" size="1" pos="81" show="1" value="01"/>
+  </field>
+</proto>
+</packet>"""
+
+footer = \
+"""
+</pdml>"""
+
+
+version = \
+"""TShark 1.12.3 (Git Rev Unknown from unknown)
+
+Copyright 1998-2015 Gerald Combs <gerald@wireshark.org> and contributors.
+This is free software; see the source for copying conditions. There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Compiled (64-bit) with GLib 2.40.0, with libpcap, with libz 1.2.8, with POSIX
+capabilities (Linux), without libnl, with SMI 0.4.8, with c-ares 1.10.0, with
+Lua 5.2, without Python, with GnuTLS 2.12.23, with Gcrypt 1.5.3, with MIT
+Kerberos, with GeoIP.
+
+Running on Linux 3.13.0-24-generic, with locale en_US.UTF-8, with libpcap
+version 1.6.1, with libz 1.2.8.
+Intel(R) Core(TM) i7-4960HQ CPU @ 2.60GHz
+
+Built using gcc 4.8.2."""
+
+import sys
+import signal
+
+
+def do_capture():
+  print(header)
+
+  def emit_packet(signum,frame):
+    print(packet)
+    print(packet)
+
+  def finish(signum,frame):
+    print footer
+    sys.exit(0)
+
+  signal.signal(signal.SIGUSR1,emit_packet)
+  signal.signal(signal.SIGHUP,finish)
+  signal.signal(signal.SIGTERM,finish)
+  signal.signal(signal.SIGQUIT,finish)
+
+  while True:
+    signal.pause()
+
+if len(sys.argv) > 1 and sys.argv[1] in ["-v","--version"]:
+  print(version)
+elif len(sys.argv) > 1 and sys.argv[1] == "-D":
+  print("1. eth0")
+else:
+  do_capture()
