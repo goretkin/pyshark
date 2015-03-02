@@ -108,6 +108,7 @@ def do_capture():
   def emit_packet(signum,frame):
     print(packet)
     print(packet)
+    sys.stdout.flush()
 
   def finish(signum,frame):
     print footer
